@@ -12,7 +12,7 @@ const reviewSchema = yup.object({
     .string()
     .required()
     .test("min-1-5", "Rating must be a number 1-5", (value) => {
-      return parseInt(value) < 6 && parseInt(value) > 1;
+      return parseInt(value) < 6 && parseInt(value) > 0;
     }),
 });
 const ReviewForm = ({ addReview }) => {
